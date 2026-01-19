@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OPPTY</title>
+  <link rel="stylesheet" href="../css/ourservices.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+<header class="main-header">
+  <div class="container">
+
+    <div class="logoo" id="menuToggle">
+      <img src="../images/322343.png" alt="Oppty Logo">
+    </div>
+
+    <div class="slide-menu" id="slideMenu">
+      <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../html/aboutus.html">ABOUT US</a></li>
+        <li class="service-dropdown">
+        <a href="#">OUR SERVICES <i class="fa fa-angle-down"></i></a>
+        <ul class="service-submenu">
+    <li><a href="../html/solutions.html">SOLUTIONS</a></li>
+  </ul>
+</li>
+        <li><a href="../html/contactus.html">CONTACT US</a></li>
+        <li><a href="../html/careers.html">CAREERS</a></li>
+        <li><a href="../html/academy.html">ACADEMY</a></li>
+        <li><a href="../index.html">TRAINING PARTNER</a></li>
+        <li class="phone-item">
+  <a href="https://wa.me/919491209900" target="_blank" style="color: inherit; text-decoration: none;">
+    📞 +91 9491209900
+  </a>
+</li>
+      </ul>
+    </div>
+
+  </div>
+</header>
+
+<section class="frame">
+
+  <div class="side left">
+    <span>UX/UI</span>
+    <span class="since">SINCE<br>2025</span>
+  </div>
+
+  <div class="center">
+    <div class="image-track">
+      <img src="../images/692ff7e4d18a1797896528.png" alt="Hero Image">
+    </div>
+
+    <div class="pill top">PRODUCTIVITY</div>
+    <div class="pill middle">EFFECTIVE</div>
+    <div class="pill bottom">VISIBILITY</div>
+  </div>
+
+  <div class="side right">
+    <span class="vertical">EXPRESSIVE</span>
+  </div>
+
+</section>
+
+
+
+  <div class="an">
+    <div class="overlay"></div>
+
+    <span class="float-item"></span>
+    <span class="float-item"></span>
+    <span class="float-item"></span>
+    <span class="float-item"></span>
+    <span class="float-item"></span>
+
+    <div class="content">
+      <h1>Future Technology</h1>
+      <p>Dynamic moving background elements</p>
+    </div>
+  </div>
+
+<section class="services">
+  <header class="services__header">
+    <div class="services__title">
+      <span class="services__subtitle">Services</span>
+      <h2>SOLUTION WE <span>PROVIDE</span></h2>
+    </div>
+
+    <p class="services__intro">
+      Unlock your business potential with our innovative, SEO-optimized solutions designed for success.
+    </p>
+  </header>
+
+  <div class="services__list">
+
+    <article class="service">
+      <h3>IT SERVICES</h3>
+      <p>
+        Boost your business with a robust IT infrastructure tailored for scalability and performance...
+      </p>
+      <div class="service__action">01</div>
+    </article>
+
+    <article class="service">
+      <h3>BPO</h3>
+      <p>
+        Optimize your business with expert outsourcing services designed to streamline processes...
+      </p>
+      <div class="service__action">02</div>
+    </article>
+
+    <article class="service">
+      <h3>WEB DEVELOPMENT</h3>
+      <p>
+        Launch your online store with custom-built eCommerce platforms tailored to your brand’s needs...
+      </p>
+      <div class="service__action">03</div>
+    </article>
+
+    <article class="service">
+      <h3>E-COMMERCE</h3>
+      <p>
+        Transform your online presence with responsive websites designed to captivate users...
+      </p>
+      <div class="service__action">04</div>
+    </article>
+
+    <article class="service">
+      <h3>AI SOLUTIONS</h3>
+      <p>
+        Revolutionize your business with AI-powered automation and predictive analytics...
+      </p>
+      <div class="service__action">05</div>
+    </article>
+
+  </div>
+</section>
+
+
+<script>
+
+  
+
+const image = document.querySelector('.image-track img');
+
+let x = -5;
+let y = -5;
+let dirX = 0.005;
+let dirY = 0.003;
+
+function drift() {
+  x += dirX;
+  y += dirY;
+
+  if (x > -3 || x < -7) dirX *= -1;
+  if (y > -3 || y < -7) dirY *= -1;
+
+  image.style.transform = `translate(${x}%, ${y}%) scale(1.05)`;
+
+  requestAnimationFrame(drift);
+}
+
+drift();
+
+
+ const toggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("slideMenu");
+  const items = menu.querySelectorAll("li");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+
+    items.forEach((item, index) => {
+      item.style.setProperty("--i", index);
+
+      
+    });
+  });
+
+
+
+</script>
+
+<footer class="footer">
+
+  <div class="footer-top">
+
+    
+    <div class="footer-col brand">
+      <img src="../images/322343.png" alt="Oppty Logo" class="logo">
+      <p>
+        Power up your success with innovative IT, BPO, E-commerce,
+        Web Development, and AI solutions tailored to your vision.
+      </p>
+    </div>
+
+   
+    <div class="footer-col">
+      <h4>HYDERABAD LOCATIONS</h4>
+      <p>
+        Hyderabad - Flat number 601,<br>
+        Mahitha's Green Galaxy, CGID Colony,<br>
+        NRSA Colony, Bagath Singh Nagar Phase 2,<br>
+        Kukatpally, Hyderabad,<br>
+        Telangana 500085
+      </p>
+    </div>
+
+
+    <div class="footer-col">
+      <h4>UDAIPUR LOCATIONS</h4>
+      <p>
+        Udaipur - Plot No: 26, 100 Feet Rd,<br>
+        Shobhagpura, Udaipur,<br>
+        Rajasthan 313011
+      </p>
+    </div>
+
+ 
+    <div class="footer-col">
+      <h4>CONTACT US</h4>
+      <p>info@oppty.in</p>
+      <p>+91-9491209900</p>
+    </div>
+
+
+    <div class="footer-col">
+      <h4>QUICK LINKS</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="cert-strip">
+    <img src="../images/png-clipart-government-of-india-ministry-of-micro-small-and-medium-enterprises-small-business-india-text-logo__1_-removebg-preview.png" alt="MSME">
+    <img src="../images/Ministry-for-Corporate-AffairS-1-removebg-preview.png" alt="MCA">
+    <img src="../images/36662669-1685562943668-bf31f5769c66e.jpg" alt="Startup India">
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Oppty. All Rights Reserved.
+  </div>
+
+</footer>
+
+</body>
+</html>

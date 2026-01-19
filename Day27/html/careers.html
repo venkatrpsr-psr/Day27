@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OPPTY-CAREERS</title>
+  <link rel="stylesheet" href="../css/careers.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+<header class="main-header">
+  <div class="container">
+
+    <div class="logoo" id="menuToggle">
+      <img src="../images/322343.png" alt="Oppty Logo">
+    </div>
+
+    <div class="slide-menu" id="slideMenu">
+      <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../html/aboutus.html">ABOUT US</a></li>
+        <li class="service-dropdown">
+        <a href="../html/ourservices.html">OUR SERVICES <i class="fa fa-angle-down"></i></a>
+        <ul class="service-submenu">
+    <li><a href="../html/solutions.html">SOLUTIONS</a></li>
+  </ul>
+</li>
+        <li><a href="../html/contactus.html">CONTACT US</a></li>
+        <li><a href="#">CAREERS</a></li>
+        <li><a href="../html/academy.html">ACADEMY</a></li>
+        <li><a href="../index.html">TRAINING PARTNER</a></li>
+        <li class="phone-item">
+  <a href="https://wa.me/919491209900" target="_blank" style="color: inherit; text-decoration: none;">
+    📞 +91 9491209900
+  </a>
+</li>
+      </ul>
+    </div>
+
+  </div>
+</header>
+
+<section class="hero">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <div class="hero-content">
+    <h1>Build the Future at <span>Oppty Technology</span></h1>
+    <p>Join a team that blends Technology + Management to deliver world-class digital solutions.</p>
+    <a href="#jobs" class="cta">View Open Positions</a>
+  </div>
+</section>
+
+<section class="expert-field">
+
+  <h1 class="title">EXPERT FIELD</h1>
+
+  <p class="subtitle">
+    PRODUCT DESIGN &nbsp;/&nbsp; UX+UI &nbsp;/&nbsp; GUI DESIGN<br>
+    WEB DESIGN &nbsp;/&nbsp; VISUAL DESIGN
+  </p>
+
+  <div class="tools">
+    <div class="tool illustrator">ILLUSTRATOR</div>
+    <div class="tool figma">FIGMA</div>
+    <div class="tool photoshop">PHOTOSHOP</div>
+    <div class="tool framer">FRAMER</div>
+  </div>
+
+</section>
+
+<section class="why">
+  <h2>Why Work With Us</h2>
+  <div class="why-grid">
+    <div class="why-card">🚀 Fast-growing Tech Company</div>
+    <div class="why-card">💡 Innovation-First Culture</div>
+    <div class="why-card">🌍 Global Clients & Projects</div>
+    <div class="why-card">🧠 Learn, Build & Lead</div>
+  </div>
+</section>
+
+<section class="jobs" id="jobs">
+  <h2>Open Positions</h2>
+
+  <div class="job-grid">
+    <div class="job-card">
+      <h3>Frontend Developer</h3>
+      <p>React • HTML • CSS • JavaScript</p>
+      <button onclick="openModal('Frontend Developer')">Apply Now</button>
+    </div>
+
+    <div class="job-card">
+      <h3>Backend Developer</h3>
+      <p>Node.js • Python • APIs</p>
+      <button onclick="openModal('Backend Developer')">Apply Now</button>
+    </div>
+
+    <div class="job-card">
+      <h3>UI/UX Designer</h3>
+      <p>Figma • UX Research • Prototyping</p>
+      <button onclick="openModal('UI/UX Designer')">Apply Now</button>
+    </div>
+
+    <div class="job-card">
+      <h3>Digital Marketing Executive</h3>
+      <p>SEO • Performance Ads • Growth</p>
+      <button onclick="openModal('Digital Marketing Executive')">Apply Now</button>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="applyModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+    <h3 id="jobTitle"></h3>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email Address">
+    <input type="file">
+    <button class="submit">Submit Application</button>
+  </div>
+</div>
+
+<script>
+    function openModal(role) {
+  document.getElementById("applyModal").style.display = "flex";
+  document.getElementById("jobTitle").innerText = role;
+}
+function closeModal() {
+  document.getElementById("applyModal").style.display = "none";
+}
+
+const tools = document.querySelectorAll('.tool');
+
+tools.forEach(tool => {
+  tool.addEventListener('mousemove', (e) => {
+    const rect = tool.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    tool.style.transform = `
+      translate(${x * 0.05}px, ${y * 0.05}px)
+      scale(1.08)
+    `;
+  });
+
+  tool.addEventListener('mouseleave', () => {
+    tool.style.transform = '';
+  });
+});
+
+ const toggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("slideMenu");
+  const items = menu.querySelectorAll("li");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+
+    items.forEach((item, index) => {
+      item.style.setProperty("--i", index);
+    });
+  });
+
+</script>
+
+<footer class="footer">
+
+  <div class="footer-top">
+
+    
+    <div class="footer-col brand">
+      <img src="../images/322343.png" alt="Oppty Logo" class="logo">
+      <p>
+        Power up your success with innovative IT, BPO, E-commerce,
+        Web Development, and AI solutions tailored to your vision.
+      </p>
+    </div>
+
+   
+    <div class="footer-col">
+      <h4>HYDERABAD LOCATIONS</h4>
+      <p>
+        Hyderabad - Flat number 601,<br>
+        Mahitha's Green Galaxy, CGID Colony,<br>
+        NRSA Colony, Bagath Singh Nagar Phase 2,<br>
+        Kukatpally, Hyderabad,<br>
+        Telangana 500085
+      </p>
+    </div>
+
+
+    <div class="footer-col">
+      <h4>UDAIPUR LOCATIONS</h4>
+      <p>
+        Udaipur - Plot No: 26, 100 Feet Rd,<br>
+        Shobhagpura, Udaipur,<br>
+        Rajasthan 313011
+      </p>
+    </div>
+
+ 
+    <div class="footer-col">
+      <h4>CONTACT US</h4>
+      <p>info@oppty.in</p>
+      <p>+91-9491209900</p>
+    </div>
+
+
+    <div class="footer-col">
+      <h4>QUICK LINKS</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="cert-strip">
+    <img src="../images/png-clipart-government-of-india-ministry-of-micro-small-and-medium-enterprises-small-business-india-text-logo__1_-removebg-preview.png" alt="MSME">
+    <img src="../images/Ministry-for-Corporate-AffairS-1-removebg-preview.png" alt="MCA">
+    <img src="../images/36662669-1685562943668-bf31f5769c66e.jpg" alt="Startup India">
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Oppty. All Rights Reserved.
+  </div>
+
+</footer>
+</body>
+</html>
